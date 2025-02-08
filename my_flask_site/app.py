@@ -1,13 +1,16 @@
 from flask import Flask, render_template, request
 import google.generativeai as genai
+import os
+from dotenv import load_dotenv
 
 app = Flask(__name__)
 
 # Configure your Gemini API key
 genai.configure(api_key="")
 
+load_dotenv()  # Load environment variables from .env file
 # Configure the model
-model = genai.GenerativeModel('gemini-pro')  # Create model instance
+API_KEY = os.getenv("GEMINI_KEY")
 
 @app.route("/")
 def index():
