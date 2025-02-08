@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechTrek</title>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+
+  <header>
+    <h1>TechTrek</h1>
+    <p>Help you choose the best career path based on your interests and skills!</p>
+  </header>
+
+  <div class="container">
+    <div class="form-container">
+      <h2>Step 1: Personal Information</h2>
+      <form id="careerForm">
+        
+        <!-- Step 1: Name and CGPA -->
+        <div class="step" id="step-1">
+          <div class="form-group">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+
+          
+
+          
+        <!-- Step 2: Select Domain -->
+        <div class="step" id="step-2">
+          <h2>Step 2: Select Your Interested Domain(s)</h2>
+          <div class="form-group">
+            <label for="domain">Interested Domain(s):</label>
+            <select id="domain" name="domain[]" multiple required>
+              <option value="Machine Learning">Machine Learning</option>
+              <option value="Data Analytics">Data Analytics</option>
+              <option value="Full-Stack Web App">Full-Stack Web App</option>
+              <option value="Web Development">Web Development</option>
+              <option value="Network Security">Network Security</option>
+              <option value="Cloud Solutions">Cloud Solutions</option>
+              <option value="Game Development">Game Development</option>
+              <option value="Mobile App Development">Mobile App Development</option>
+              <option value="Data Science">Data Science</option>
+              <option value="Image Recognition">Image Recognition</option>
+            </select>
+          
+
+        <!-- Step 3: Projects -->
+        <div class="step" id="step-3">
+          <h2>Step 3: Completed Projects</h2>
+          <div class="checkbox-group">
+            <label><input type="checkbox" name="projects[]" value="Machine Learning"> Machine Learning</label>
+            <label><input type="checkbox" name="projects[]" value="Data Analytics"> Data Analytics</label>
+            <label><input type="checkbox" name="projects[]" value="Full-Stack Web App"> Full-Stack Web App</label>
+            <label><input type="checkbox" name="projects[]" value="Mobile App Development"> Mobile App Development</label>
+            <label><input type="checkbox" name="projects[]" value="Game Development"> Game Development</label>
+            <label><input type="checkbox" name="projects[]" value="Cloud Solutions"> Cloud Solutions</label>
+          
+        <!-- Step 4: Strengths & Weaknesses -->
+        <div class="step" id="step-4">
+          <h2>Step 4: Strengths & Weaknesses</h2>
+          <div class="form-group">
+            <label for="java">Java:</label>
+            <select name="java" id="java" required>
+              <option value="strength">Strength</option>
+              <option value="weak">Weak</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="python">Python:</label>
+            <select name="python" id="python" required>
+              <option value="strength">Strength</option>
+              <option value="weak">Weak</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="sql">SQL:</label>
+            <select name="sql" id="sql" required>
+              <option value="strength">Strength</option>
+              <option value="weak">Weak</option>
+            </select>
+          </div>
+
+          <button>Submit</button>
+        </div>
+
+      </form>
+
+      <!-- Career Prediction -->
+      <div id="careerPrediction" style="display:none;">
+        <h2>Your Career Path Prediction</h2>
+        <p id="predictionResult"></p>
+      </div>
+    </div>
+  </div>
+
+ 
+</body>
+</html>
