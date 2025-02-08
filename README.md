@@ -26,15 +26,11 @@ So our website, TechTrek is just a simple site that includes a questionnaire in 
 ## Technical Details
 ### Technologies/Components Used
 For Software:
-- HTML,CSS,Python.
-- Flask
+- [languages used]- HTML,CSS,Python.
+- [FRamework used]
 - [Libraries used]
 - [Tools used]
 
-For Hardware:
-- [List main components]
-- [List specifications]
-- [List tools required]
 
 ### Implementation
 For Software:
@@ -60,18 +56,6 @@ For Software:
 # Diagrams
 ![Workflow](Add your workflow/architecture diagram here)
 *Add caption explaining your workflow*
-
-For Hardware:
-
-# Schematic & Circuit
-![Circuit](Add your circuit diagram here)
-*Add caption explaining connections*
-
-![Schematic](Add your schematic diagram here)
-*Add caption explaining the schematic*
-
-# Build Photos
-![Team](Add photo of your team here)
 
 
 ![Components](Add photo of your components here)
