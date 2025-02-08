@@ -4,7 +4,10 @@ import google.generativeai as genai
 app = Flask(__name__)
 
 # Configure your Gemini API key
-genai.configure(api_key="AIzaSyDC3dPz_t-w5lcwCPS2ZNIHieyL_2AJjMs")
+genai.configure(api_key="")
+
+# Configure the model
+model = genai.GenerativeModel('gemini-pro')  # Create model instance
 
 @app.route("/")
 def index():
@@ -30,23 +33,22 @@ def predict():
         f"- Java: {java}\n"
         f"- Python: {python}\n"
         f"- SQL: {sql}\n\n"
-        f"Provide a short and clear recommendation with career paths."
+        f"Provide a short and clear recommendation with career paths, including the scope of each job and its average salary."
     )
 
     try:
         # Generate the response using Google Gen AI
-        response = genai.generate_text(
-            model="text-bison-001",  # Ensure you're using the right model
-            prompt=prompt,
-            temperature=0.7,
-            max_output_tokens=300,
-        )
+        response = model.generate_content(prompt)  # Use generate_text instead
+        
+        # Log the full response for debugging
+        print("Full API response:", response)
 
-        # Extracting the generated text
-        recommendation = response["candidates"][0]["output"]
+        # Extract the text from the response
+        recommendation = response.text  # Access the text attribute
 
     except Exception as e:
         recommendation = f"An error occurred while generating the recommendation: {str(e)}"
+        print(f"Error: {str(e)}")
 
     # Render the result in the HTML
     print("Recommendation: ", recommendation)   

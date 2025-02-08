@@ -5,8 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TechTrek</title>
   <link rel="stylesheet" href="/static/style.css">
-
-  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('careerForm');
+        const predictionDiv = document.getElementById('careerPrediction');
+        
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            fetch('/predict', {
+                method: 'POST',
+                body: new FormData(form)
+            })
+            .then(response => response.text())
+            .then(html => {
+                document.documentElement.innerHTML = html;
+                if (document.getElementById('careerPrediction')) {
+                    document.getElementById('careerPrediction').style.display = 'block';
+                }
+            });
+        });
+    });
+  </script>
+  {% if recommendation %}
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const predictionDiv = document.getElementById('careerPrediction');
+        predictionDiv.style.display = 'block';
+    });
+  </script>
+  {% endif %}
 </head>
 <body>
 
@@ -18,7 +45,7 @@
   <div class="container">
     <div class="form-container">
       <h2>Step 1: Personal Information</h2>
-      <form id="careerForm">
+      <form id="careerForm" method="POST" action="/predict">
         
         <!-- Step 1: Name and CGPA -->
         <div class="step" id="step-1">
@@ -26,10 +53,8 @@
             <label for="name">Full Name:</label>
             <input type="text" id="name" name="name" required>
           </div>
+        </div>
 
-          
-
-          
         <!-- Step 2: Select Domain -->
         <div class="step" id="step-2">
           <h2>Step 2: Select Your Interested Domain(s)</h2>
@@ -47,7 +72,8 @@
               <option value="Data Science">Data Science</option>
               <option value="Image Recognition">Image Recognition</option>
             </select>
-          
+          </div>
+        </div>
 
         <!-- Step 3: Projects -->
         <div class="step" id="step-3">
@@ -59,7 +85,9 @@
             <label><input type="checkbox" name="projects[]" value="Mobile App Development"> Mobile App Development</label>
             <label><input type="checkbox" name="projects[]" value="Game Development"> Game Development</label>
             <label><input type="checkbox" name="projects[]" value="Cloud Solutions"> Cloud Solutions</label>
-          
+          </div>
+        </div>
+
         <!-- Step 4: Strengths & Weaknesses -->
         <div class="step" id="step-4">
           <h2>Step 4: Strengths & Weaknesses</h2>
@@ -87,19 +115,21 @@
             </select>
           </div>
 
-          <button>Submit</button>
+          <button type="submit">Submit</button>
         </div>
-
       </form>
 
       <!-- Career Prediction -->
-      <div id="careerPrediction" style="display:none;">
+      <div id="careerPrediction" {% if not recommendation %}style="display:none;"{% endif %}>
         <h2>Your Career Path Prediction</h2>
-        <p id="predictionResult"></p>
+        <div id="predictionResult" class="prediction-box">
+            {% if recommendation %}
+                {{ recommendation | safe }}
+            {% endif %}
+        </div>
       </div>
     </div>
   </div>
 
- 
 </body>
 </html>
