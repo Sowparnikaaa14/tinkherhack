@@ -17,7 +17,7 @@
 TechTrek is a career path recommending website specifically made for engineering students or students studying in CS Stream to find out their ideal career.It includes their job interests, it's scope and many other details related to their job.
 
 ### The Problem statement
-Many students may have chosen the engineering ,B.E or B.Tech mainly because of the ongoing trends or due to parents compulsion on joining it. So students like us literally have no idea on how their future would be which might lead them to stay unemployed or to choose a career which doesn't do justice too what they learned for years.
+Many students may have chosen the engineering ,B.E or B.Tech Computer Science, mainly because of the ongoing trends or due to parents compulsion on joining it. So students like us literally have no idea on how their future would be which might lead them to stay unemployed or to choose a career which doesn't do justice too what they learned for years.
 
 ### The Solution
 So our website, TechTrek is just a simple site that includes a questionnaire in which you need to fill your academic details such as your branch, your cgpa which is included so that you get the filtered jobs that are available for the cgpa you acquired and your strengths in programming languages ,so that you will get the jobs filtered based on your preferred programming language. And voila!, you will get the available jobs and their scope and other details like salary, benifits ,stuffs , etc.
@@ -27,9 +27,9 @@ So our website, TechTrek is just a simple site that includes a questionnaire in 
 ### Technologies/Components Used
 For Software:
 - [languages used]- HTML,CSS,Python.
-- [FRamework used]
+- [FRamework used]-FLASK
 - [Libraries used]
-- [Tools used]
+- [Tools used]-chatgpt,metaAi,gemini,vscode
 
 
 ### Implementation
