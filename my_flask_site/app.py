@@ -40,6 +40,7 @@ def predict():
     )
 
     try:
+        model = genai.GenerativeModel('gemini-pro')  # Create model instance
         # Generate the response using Google Gen AI
         response = model.generate_content(prompt)  # Use generate_text instead
         
