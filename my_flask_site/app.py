@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 app = Flask(__name__)
 
 # Configure your Gemini API key
-genai.configure(api_key="")
+genai.configure(api_key="AIzaSyDC3dPz_t-w5lcwCPS2ZNIHieyL_2AJjMs")
 
 load_dotenv()  # Load environment variables from .env file
 # Configure the model
