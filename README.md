@@ -35,50 +35,35 @@ For Software:
 ### Implementation
 For Software:
 # Installation
-[commands]
+Python 3.11.0, flask framework, google generativeai
 
 # Run
-[commands]
+Visual Studio Code, Python Flask
 
 ### Project Documentation
 For Software:
 
 # Screenshots (Add at least 3)
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
+![https://drive.google.com/file/d/1zjUnFPOAn0O4XXSjNl9ife3P_ohq9Pym/view?usp=sharing](Steps 1,2,3 of the site "TechTrek)
+The given image shows us the details we need to enter in the given boxes i.e.,name,choose our interest, and the projects we completed.
 
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
+![https://drive.google.com/file/d/1GvbFev9okWj0eqLePvvTjCMu0KthMHOe/view?usp=sharing](4th step to submit in the site "TechTrek")
+The last step in the site is to provide our strengths in the given languages python,java and SQL and to submit it.
 
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
+![https://drive.google.com/file/d/1krQrvIhG5mzTiFDVC7-unto9essaYmcH/view?usp=sharing](Final Result)
+The following image shows the generated career prediction results for the given input in the site.
 
-# Diagrams
-![Workflow](Add your workflow/architecture diagram here)
-*Add caption explaining your workflow*
-
-
-![Components](Add photo of your components here)
-*List out all components shown*
-
-![Build](Add photos of build process here)
-*Explain the build steps*
-
-![Final](Add photo of final product here)
-*Explain the final build*
 
 ### Project Demo
 # Video
-[Add your demo video link here]
-*Explain what the video demonstrates*
+[<video controls src="20250209-0207-39.8022507.mp4" title="Title"></video>]
+This video shows how the techtrek website actually works, first we enter our required details like name, the course we are interested in and the project we did, and the website will generate the available career options in the bottom of the site.
 
-# Additional Demos
-[Add any extra demo materials/links]
 
 ## Team Contributions
-- [Name 1]: [Specific contributions]
-- [Name 2]: [Specific contributions]
-- [Name 3]: [Specific contributions]
+- Sowparnika T : Use of flask and implementing gemini api for filtering.
+- K Gopika Gopalakrishnan: Input code for Frontend (HTML)
+- Liya Shaji:Modified frontpage using CSS
 
 ---
 Made with ❤️ at TinkerHub
